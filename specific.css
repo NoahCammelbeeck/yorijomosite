@@ -1,0 +1,225 @@
+@font-face {
+  font-family: "vogue";
+  src: url(fonts/vogue.ttf) format("truetype");
+}
+
+.nav-btn {
+  font-family: "vogue";
+  font-size: 15px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.display-lg {
+  font-family: "vogue";
+  font-size: 77px;
+  color: var(--color-primary);
+}
+
+.display-sm {
+  font-family: "vogue";
+  font-size: 30px;
+  color: var(--color-primary);
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: transparent;
+  z-index: 1000;
+}
+
+nav svg {
+  width: 100%;
+  height: auto;
+}
+
+.hero {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#copenhagen,
+#tuscany,
+#sanne {
+  opacity: 0;
+  transition: opacity 1.9s ease;
+}
+
+#copenhagen.visible,
+#tuscany.visible,
+#sanne.visible {
+  opacity: 1;
+}
+@media (min-width: 960px) {
+  .top-padding-lg-m {
+    padding-top: 80px;
+  }
+
+  .top-padding-lg-l {
+    padding-top: 160px;
+  }
+
+  .top-padding-lg-xl {
+    padding-top: 240px;
+  }
+
+  .top-padding-lg-xxl {
+    padding-top: 320px;
+  }
+}
+
+.logo-footer {
+  color: var(--color-primary-dark);
+  height: auto;
+  padding: var(--space-md);
+}
+
+.footer-divider {
+  border-bottom: var(--border-width-sm) solid var(--color-primary-dark);
+}
+
+@media (min-width: 960px) {
+  .footer-divider {
+    border-bottom: 0;
+    border-right: 2px solid var(--color-primary-dark);
+  }
+}
+
+@media (max-width: 959px) {
+  .logo-footer {
+    order: 1;
+    width: 100%;
+    height: auto;
+  }
+}
+
+footer a {
+  color: var(--color-primary-dark);
+}
+
+.underline {
+  text-decoration: underline;
+}
+/* ===== Burger menu ===== */
+
+/* Hidden on desktop */
+.burger,
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 959px) {
+  /* Hide desktop links, keep the logo */
+  .nav-links {
+    display: none;
+  }
+
+  .nav-logo {
+    grid-column: 1 / span 9;
+  }
+
+  /* Burger button, top right */
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: var(--space-xl);
+    right: var(--space-md);
+    width: 32px;
+    height: 22px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    z-index: 1002; /* above the open menu */
+    color: var(--color-primary);
+  }
+
+  .burger:hover {
+    background: transparent;
+    color: var(--color-primary);
+  }
+
+  .burger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: currentColor;
+    transition:
+      transform 0.3s ease,
+      opacity 0.2s ease;
+  }
+
+  /* Turns into an X and goes dark when open */
+  .burger[aria-expanded="true"],
+  .burger[aria-expanded="true"]:hover {
+    color: var(--color-primary-dark);
+  }
+  .burger[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  .burger[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+  .burger[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  /* Fullscreen menu (extends .mobile-menu from system.css) */
+  .mobile-menu {
+    display: block;
+    z-index: 999; /* below the nav (1000), so the burger stays clickable */
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+  }
+
+  .mobile-menu.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .mobile-menu a {
+    color: var(--color-primary-dark);
+    font-size: var(--font-size-md);
+  }
+}
+
+/* Prevent page scroll while the menu is open */
+body.menu-open {
+  overflow: hidden;
+}
+
+@media (max-width: 959px) {
+  .cat-bags {
+    order: -1;
+  }
+}
