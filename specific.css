@@ -172,6 +172,14 @@ nav svg {
   .top-padding-lg-xxl {
     padding-top: 320px;
   }
+
+  .top-padding-lg-xxxl {
+    padding-top: 400px;
+  }
+
+  .top-padding-lg-xxxl {
+    padding-top: 480px;
+  }
 }
 
 .logo-footer {
