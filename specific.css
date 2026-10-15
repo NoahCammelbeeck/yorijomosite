@@ -3,8 +3,14 @@
   src: url(fonts/vogue.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "anuphan";
+  src: url(fonts/Anuphan-Regular.ttf) format("truetype");
+  font-weight: normal;
+}
+
 .nav-btn {
-  font-family: "vogue";
+  font-family: "anuphan";
   font-size: 15px;
   &:hover {
     text-decoration: underline;

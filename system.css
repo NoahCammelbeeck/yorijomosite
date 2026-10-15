@@ -24,6 +24,18 @@ System styles
   src: url(fonts/arial-hebrew.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "anuphan";
+  src: url(fonts/Anuphan-Regular.ttf) format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "anuphanLight";
+  src: url(fonts/Anuphan-Light.ttf) format("truetype");
+  font-weight: normal;
+}
+
 /* ========== 1: Reset ========== */
 
 * {
@@ -98,7 +110,7 @@ select {
   --space-xxxl: 6rem;
 
   /* Font-størrelser */
-  --font-size-sm: 0.75rem;
+  --font-size-sm: 16px;
   --font-size-base: 1rem;
   --font-size-md: 1.5rem;
   --font-size-lg: 24px;
@@ -892,11 +904,11 @@ h3,
   line-height: 1.5;
 }
 h1 {
-  font-family: "arial";
+  font-family: "anuphan";
   font-size: 50px;
 }
 h2 {
-  font-family: "arial";
+  font-family: "anuphan";
   font-size: 30px;
   color: var(--color-primary-dark);
 }
@@ -905,7 +917,7 @@ h2 {
 }
 h3,
 h4 {
-  font-family: "sansationLight";
+  font-family: "anuphanLight";
 }
 h1,
 .text-xl {
