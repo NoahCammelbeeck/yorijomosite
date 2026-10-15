@@ -15,23 +15,25 @@ System styles
 */
 
 @font-face {
-  font-family: "noto";
-  src: url(fonts/NotoSans-VariableFont_wdth\,wght.ttf);
+  font-family: "garamond";
+  src: url(fonts/EBGaramond-VariableFont_wght.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: "sansationRegular";
-  src: url(fonts/Sansation-Regular.ttf);
+  font-family: "arial";
+  src: url(fonts/arial-hebrew.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: "sansationBold";
-  src: url(fonts/Sansation-Bold.ttf);
+  font-family: "anuphan";
+  src: url(fonts/Anuphan-Regular.ttf) format("truetype");
+  font-weight: normal;
 }
 
 @font-face {
-  font-family: "sansationLight";
-  src: url(fonts/Sansation-Light.ttf);
+  font-family: "anuphanLight";
+  src: url(fonts/Anuphan-Light.ttf) format("truetype");
+  font-weight: normal;
 }
 
 /* ========== 1: Reset ========== */
@@ -108,7 +110,7 @@ select {
   --space-xxxl: 6rem;
 
   /* Font-størrelser */
-  --font-size-sm: 0.75rem;
+  --font-size-sm: 16px;
   --font-size-base: 1rem;
   --font-size-md: 1.5rem;
   --font-size-lg: 24px;
@@ -118,9 +120,9 @@ select {
   --font-weight-bold: 700;
 
   /* Fonte */
-  --font-family-sans: sans-serif;
+  /*   --font-family-sans: sans-serif;
   --font-family-serif: serif;
-  --font-family-mono: monospace;
+  --font-family-mono: monospace; */
 
   /* Containers */
   --container-full: 100%;
@@ -881,15 +883,12 @@ select {
 
 body {
   font-size: var(--font-size-base);
-  font-family: var(--font-family-sans);
+  /*  font-family: var(--font-family-sans); */
   line-height: 1.5;
 }
 p {
   margin-bottom: var(--space-md);
-  font-family: "noto";
-}
-a {
-  font-family: "noto";
+  font-family: "garamond";
 }
 h1,
 h2,
@@ -902,10 +901,12 @@ h3,
   line-height: 1.5;
 }
 h1 {
-  font-family: "sansationBold";
+  font-family: "anuphan";
+  font-size: 50px;
 }
 h2 {
-  font-family: "sansationRegular";
+  font-family: "anuphan";
+  font-size: 30px;
   color: var(--color-primary-dark);
 }
 .text-sm {
@@ -913,7 +914,7 @@ h2 {
 }
 h3,
 h4 {
-  font-family: "sansationLight";
+  font-family: "anuphanLight";
 }
 h1,
 .text-xl {
@@ -1018,8 +1019,7 @@ select {
   width: 100%;
   padding: var(--space-sm) var(--space-md);
   border: 1px solid #d1d5db;
-  border-radius: var(--radius-sm);
-  font-family: inherit;
+  font-family: "garamond";
   font-size: var(--font-size-base);
   transition:
     border-color 0.2s ease,
@@ -1069,7 +1069,6 @@ input[type="file"] {
 input[type="range"] {
   width: 100%;
   height: 4px;
-  -webkit-appearance: none;
   background: #e5e7eb;
   border-radius: var(--radius-full);
   outline: none;
