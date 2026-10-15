@@ -23,6 +23,15 @@
   color: var(--color-primary);
 }
 
+@media (max-width: 959px) {
+  .display-lg {
+    font-size: 50px;
+  }
+  .display-sm {
+    font-size: 20px;
+  }
+}
+
 nav {
   position: absolute;
   top: 0;
