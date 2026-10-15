@@ -890,8 +890,7 @@ p {
   margin-bottom: var(--space-md);
   font-family: "garamond";
 }
-h1,
-h2,
+
 h3,
 .text-xl,
 .text-lg,
@@ -901,13 +900,21 @@ h3,
   line-height: 1.5;
 }
 h1 {
-  font-family: "anuphan";
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
   font-size: 50px;
+  font-weight: var(--font-weight-normal);
 }
 h2 {
-  font-family: "anuphan";
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
   font-size: 30px;
   color: var(--color-primary-dark);
+  font-weight: var(--font-weight-normal);
 }
 .text-sm {
   font-size: var(--font-size-sm);
@@ -916,7 +923,7 @@ h3,
 h4 {
   font-family: "anuphanLight";
 }
-h1,
+
 .text-xl {
   font-size: var(--font-size-xl);
 }
